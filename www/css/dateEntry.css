@@ -1,7 +1,7 @@
 .dateEntry{
     margin-left: 15px;
     font-size: 20px;
-    margin-bottom: 2px;
+    margin-bottom: 0px;
 }
 .shiny-options-group{
     margin-left: 30px;
@@ -17,7 +17,7 @@
 }
 
 .year, .event, .type{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .selectItem {
@@ -37,10 +37,22 @@
 
 .sidebarNew {
     display: none;
-    padding-left: 4%;
+    padding-left: 0%;
 }
 
 .filterButton{
     margin-top: 20%;
     width: 100%;
+}
+
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #fff !important;
+    border: 0px !important;
+    border-radius: 4px;
 }
