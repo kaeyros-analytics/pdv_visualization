@@ -31,7 +31,7 @@
     <script src="./js/jquery_3_5_1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./bootstrap_4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script src="./js/dynamicContent.js"></script> -->
+    <script src="./js/dynamicContent.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/dateEntry.js"></script>
 
@@ -65,18 +65,19 @@
                                 data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
                         </div>
                     </div>
-                    <!-- The classname of this select date is filterDateEntry -->
-                    <div class="input-daterange input-group input-group-sm filterDateEntry">
-                        <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
+                    <!-- The classname of this select date is filterDateEntry daterangeid -->
+                    <div class="">
+                      {{daterangeid}}
+                        <!-- <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
                             data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
                         <span class="input-group-text"> - </span>
                         <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
-                            data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
+                            data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25"> -->
                     </div>
                 </div>
                 <div class="year">
                     <div class="dateEntry">
-                        <a>Aggregation Time </a>
+                        <a>Country </a>
                         <div class="tooltipIcon">
                             <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
                                 data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
@@ -84,15 +85,16 @@
                     </div>
                     <!-- The classname of this select date is yearSelect -->
                     <div class="selectize-control single plugin-selectize-plugin-a11y yearSelect">
-                        <select class="selectItem borderInput" name="" id="">
+                      {{countryid}}
+                       <!-- <select class="selectItem borderInput" name="" id="">
                             <option value="">Year</option>
                             <option value="">2023</option>
                             <option value="">2022</option>
                             <option value="">2021</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
-                <div class="year">
+                <div class="event">
                     <div class="dateEntry">
                         <a>Aggregation Measure </a>
 
@@ -113,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="year">
+                <div class="type">
                     <div class="dateEntry">
                         <a>Type POS</a>
 
@@ -122,15 +124,23 @@
                                 data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
                         </div>
                     </div>
-                    <!-- The classname of this select date is eventTypeSelect -->
+                    <!-- The classname of this select date is eventTypeSelect  -->
                     <div class="selectize-control single plugin-selectize-plugin-a11y eventTypeSelect">
-                        <select class="selectItem borderInput" name="" id="">
+                      {{cityid}}
+                        <!-- <select class="selectItem borderInput" name="" id="">
                             <option value="">Small</option>
                             <option value="">Medium</option>
                             <option value="">Big</option>
-                        </select>
+                        </select> -->
                     </div>
                 </div>
+
+ <!--                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output mt-4">
+                    <button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter">
+                        <i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button>
+                </div> -->
+
+                
             </div>
         </aside>
         <!-- Navbar Area -->
@@ -241,7 +251,7 @@
                     </div>
                     <div id="PDV" class="tab-pane " >
                         <div class="tab-content " >
-                            <div class="tab-pane active" id={{ tabOneId }}>
+                            <div class="tab-pane active">
 
                                 <div class="container-fluid">
                                     <div class="row p-0 m-0">
@@ -262,22 +272,14 @@
                                     </div>
                                 </div>
 
-                                <!--  {{ tabOneContent }} -->
+                               
                             </div>
-                            <div class="tab-pane" id={{ tabTwoId }}>
-                               <!--  {{ tabTwoContent }} -->
-                            </div>
-                            <!-- <div class="tab-pane" id={{ tabThreeId }}>
-                              {{ tabThreeContent }}
-                            </div>
-                            <div class="tab-pane" id={{ tabFourId }}>
-                              {{ tabFourContent }}
-                            </div> -->
+                           
                         </div>
                     </div>
                     <div id="visualization" class="tab-pane ">
                         <div class="tab-content ">
-                            <div class="tab-pane active" id={{ tabOneId }}>
+                            <div class="tab-pane active">
 
                                 <div class="container-fluid">
                                     <div class="row p-0 m-0">
@@ -297,18 +299,7 @@
                                         <!-- End of the second plot -->
                                     </div>
                                 </div>
-
-                                <!--  {{ tabOneContent }} -->
                             </div>
-                            <div class="tab-pane" id={{ tabTwoId }}>
-                                {{ tabTwoContent }}
-                            </div>
-                            <!-- <div class="tab-pane" id={{ tabThreeId }}>
-                              {{ tabThreeContent }}
-                            </div>
-                            <div class="tab-pane" id={{ tabFourId }}>
-                              {{ tabFourContent }}
-                            </div> -->
                         </div>
                     </div>
                 </div>

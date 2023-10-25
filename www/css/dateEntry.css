@@ -1,7 +1,7 @@
 .dateEntry{
-    margin-left: 10px;
-    font-size: 20px;
-    margin-bottom: 5px;
+    margin-left: 15px;
+    font-size: 15px;
+    margin-bottom: 2px;
 }
 .shiny-options-group{
     margin-left: 30px;
@@ -16,8 +16,8 @@
     border-radius: 4px;
 }
 
-.year{
-    margin-top: 14%;
+.year, .event, .type{
+    margin-top: 10%;
 }
 
 .selectItem {
