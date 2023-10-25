@@ -102,7 +102,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .selectize-control{
     width: 200px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 input-group-sm>.custom-select, .input-group-sm>.form-control, .input-group-sm>.input-group-append>.btn, .input-group-sm>.input-group-append>.input-group-text, .input-group-sm>.input-group-prepend>.btn, .input-group-sm>.input-group-prepend>.input-group-text {

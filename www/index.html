@@ -44,15 +44,15 @@
     <!--<script src="./js/jquery_3_5_1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./bootstrap_4.5.2/js/bootstrap.min.js"></script>
-    <script src="./js/dynamicContent.js"></script>
-    <script src="./js/form.js"></script>-->
-    <script src="./js/dateEntry.js"></script> 
+    <!-- <script src="./js/dynamicContent.js"></script> -->
+    <script src="./js/form.js"></script>
+    <script src="./js/dateEntry.js"></script>
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
- {{ headContent() }}
- {{ suppressDependencies("bootstrap") }} 
+    {{ headContent() }}
+    {{ suppressDependencies("bootstrap") }}
 </head>
 
 <body>
@@ -79,8 +79,8 @@
                         </div>
                     </div>
                     <!-- The classname of this select date is filterDateEntry daterangeid -->
-                    <div class="">
-                      {{daterangeid}}
+                    <div class="input-daterange input-group input-group-sm filterDateEntry">
+                        {{daterangeid}}
                         <!-- <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
                             data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
                         <span class="input-group-text"> - </span>
@@ -98,34 +98,13 @@
                     </div>
                     <!-- The classname of this select date is yearSelect -->
                     <div class="selectize-control single plugin-selectize-plugin-a11y yearSelect">
-                      {{countryid}}
-                       <!-- <select class="selectItem borderInput" name="" id="">
+                        {{countryid}}
+                        <!-- <select class="selectItem borderInput" name="" id="">
                             <option value="">Year</option>
                             <option value="">2023</option>
                             <option value="">2022</option>
                             <option value="">2021</option>
                         </select> -->
-                    </div>
-                </div>
-                <div class="event">
-                    <div class="dateEntry">
-                        <a>Aggregation Measure </a>
-
-                        <div class="tooltipIcon">
-                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
-                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
-                        </div>
-                    </div>
-                    <!-- The classname of this select date is radioSelect -->
-                    <div class="shiny-options-group radioSelect">
-                        <div class="radio">
-                            <input id="radio1" type="radio" name="radio">
-                            <label for="radio1">Events</label>
-                        </div>
-                        <div class="radio">
-                            <input id="radio2" type="radio" name="radio">
-                            <label for="radio2">Others</label>
-                        </div>
                     </div>
                 </div>
                 <div class="type">
@@ -139,7 +118,7 @@
                     </div>
                     <!-- The classname of this select date is eventTypeSelect  -->
                     <div class="selectize-control single plugin-selectize-plugin-a11y eventTypeSelect">
-                      {{cityid}}
+                        {{cityid}}
                         <!-- <select class="selectItem borderInput" name="" id="">
                             <option value="">Small</option>
                             <option value="">Medium</option>
@@ -148,9 +127,12 @@
                     </div>
                 </div>
 
-                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output filterButton" aria-live="polite"><button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter" title="Filter data" type="button"><i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button></div>
+                <!--                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output mt-4">
+                    <button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter">
+                        <i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button>
+                </div> -->
 
-                
+
             </div>
         </aside>
         <!-- Navbar Area -->
@@ -233,7 +215,7 @@
         <div id="content-wrapper">
             <div id="content-container">
                 <div class="tab-content">
-                    <div id="About" class="tab-pane active" >
+                    <div id="About" class="tab-pane active">
                         <h2>General Information</h2>
 
                         <p>
@@ -259,8 +241,8 @@
 
                         </p>
                     </div>
-                    <div id="PDV" class="tab-pane " >
-                        <div class="tab-content " >
+                    <div id="PDV" class="tab-pane ">
+                        <div class="tab-content ">
                             <div class="tab-pane active">
 
                                 <div class="container-fluid">
@@ -284,9 +266,9 @@
                                     </div>
                                 </div>
 
-                               
+
                             </div>
-                           
+
                         </div>
                     </div>
                     <div id="visualization" class="tab-pane ">
@@ -319,16 +301,15 @@
         </div>
 
         <script>
-/*             console.log("hello")
-            setTimeout(() => {
-                sidebar = document.getElementById("sidebarNew")
-                console.log(sidebar)
-            }, 1000) */
-
             let pdv = document.getElementById("nav_ucdp")
             let visualization = document.getElementById("visualization")
             let about = document.getElementById("about")
             let plot = document.getElementsByClassName("plot")
+
+            let hamburgerHTML = '<a href="#" style="font-weight: bold; font-size: 3.3rem; position: relative; top: -2px;"><i class="bi bi-text-indent-left"></i></a>';
+            let closeHTML = '<a href="#">&#10006;</a>';
+            let widthSidebar = $("#sidebar-wrapper").width();
+            var previewlogo = document.getElementById("previewlogo");
             console.log(plot.item(0))
             console.log(pdv)
 
@@ -336,34 +317,78 @@
             plot.item(0).addEventListener("click", showSidebar)
             about.addEventListener("click", disableSidebar)
 
-            
-
             function showSidebarElement() {
                 var sidebarElement = document.getElementById("sidebarNew1");
                 console.log(sidebarElement)
                 if (sidebarElement.classList.contains("sidebarNew")) {
-                    
-                console.log(100)*/
+
+                    console.log(100)
                     /* sidebarElement.classList.remove("sidebarNew"); */
                 } else {
                     sidebarElement.classList.add("sidebarNew");
-                console.log(200)
+                    console.log(200)
                 }
-            } 
+            }
             function showSidebar() {
                 var sidebarElement = document.getElementById("sidebarNew1");
                 console.log(2000)
                 sidebarElement.classList.remove("sidebarNew");
-            } 
+            }
             function disableSidebar() {
                 var sidebarElement = document.getElementById("sidebarNew1");
                 console.log(2000)
                 sidebarElement.classList.add("sidebarNew");
-            }  
-            
-            
-            
+            }
             showSidebarElement()
+
+            if (widthSidebar > 0) {
+                $("#hamburgerCloseToggle").html(closeHTML);
+            } else {
+                $("#hamburgerCloseToggle").html(hamburgerHTML);
+            }
+
+            $(window).resize(function () {
+                if (previousWidth) {
+
+                    if ((previousWidth > 768) && (width <= 768) && ($("#sidebar-wrapper").width() > 0)) {
+                        if ($("#hamburgerCloseToggle").html().length > 45) {
+                            $("#hamburgerCloseToggle").html(closeHTML);
+                        } else {
+                            $("#hamburgerCloseToggle").html(hamburgerHTML);
+                        }
+                    }
+
+                    if ((previousWidth <= 768) && (width > 768)) {
+                        if ($("#hamburgerCloseToggle").html().length > 45) {
+                            $("#hamburgerCloseToggle").html(closeHTML);
+                        } else {
+                            $("#hamburgerCloseToggle").html(hamburgerHTML);
+                        }
+                    }
+
+                }
+                previousWidth = $(window).width();
+            });
+
+            // toggle sidebar //
+            $(document).on("click", "#sidebar-toggle", function () {
+
+                let width = $(window).width();
+
+                $("#wrapper").toggleClass("toggled");
+                if ($("#hamburgerCloseToggle").html().length > 45) {
+                    $("#hamburgerCloseToggle").html(closeHTML);
+                    if (width <= 768) {
+                        previewlogo.style.display = "none";
+                    }
+                } else {
+                    $("#hamburgerCloseToggle").html(hamburgerHTML);
+                    if (width <= 768) {
+                        previewlogo.style.display = "block";
+                    }
+                }
+            });
+
 
         </script>
 
