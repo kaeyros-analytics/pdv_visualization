@@ -12,7 +12,7 @@ table_trans_service_type_server <- function(input, output, session) {
     
     df_bavaria_test2 <- df_bavaria1 %>% 
       #filter(between(Date, as.Date('2022-01-20'), as.Date('2022-02-20'))) %>% 
-      filter(Date >= '2021-01-01' & Date <= '2022-12-28') %>% 
+      filter(Date >= '2021-01-01' & Date <= '2023-07-28') %>% 
       group_by(PdvCountry, Date) %>% 
       summarise(sum_SalesAmount = sum(SalesAmount))
     
@@ -22,7 +22,7 @@ table_trans_service_type_server <- function(input, output, session) {
                             #line=list(color=col), marker=list(color=col), 
                             hovertext = paste("Date :",df_bavaria_test2$Date,
                                               "<br>Pays :", df_bavaria_test2$PdvCountry,
-                                              "<br> Montant des ventes :", df_bavaria_test2$sum_SalesAmount),
+                                              "<br> Montant des ventes :", paste(formatC(df_bavaria_test2$sum_SalesAmount, format = "d",big.mark = "."), "€")),
                             hoverinfo = 'text') %>%
       layout(title = "",  barmode="stack", bargap=0.3,
              legend = list(x = 100, y = 0.95, title=list(color= "blue", text='<b>Pays</b>')),
