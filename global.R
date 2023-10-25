@@ -74,4 +74,9 @@ eval(parse('./R/modules/pdv_city_filter.R', encoding="UTF-8"))
 
 eval(parse('./R/modules/map_sales_amount.R', encoding="UTF-8"))
 
+#eval(parse('./R/modules/tab3_filter_client_id.R', encoding="UTF-8"))
+#eval(parse('./R/modules/tab3_filter_machine_id.R', encoding="UTF-8"))
+#eval(parse('./R/modules/tab3_daterange.R', encoding="UTF-8"))
+#eval(parse('./R/modules/tab3_calculate_button.R', encoding="UTF-8"))
+
 

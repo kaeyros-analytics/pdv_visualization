@@ -5,13 +5,13 @@ map_ui <- function(id) {
   tagList(
     tags$div(
       class = "PDVplot1",
+      
       shinycssloaders::withSpinner(leaflet::leafletOutput(outputId = ns("map_plot")), type = 1, color = 'blue')
     ) # end tags$div
   ) # end tagList
 } #
 
 map_server <- function(input, output, session) {
-
   output$map_plot <- renderLeaflet({
     # https://stackoverflow.com/questions/33041266/r-rworldmap-map-issue-and-leaflet-application
     # generate the wordl map
@@ -31,7 +31,8 @@ map_server <- function(input, output, session) {
     
     df_bavaria_map <- df_bavaria1 %>% 
       #filter(between(Date, as.Date('2022-01-20'), as.Date('2022-02-20'))) %>% 
-      filter(date >= input$daterange[1] & date <= input$daterange[2]) %>% 
+      filter(Date >= '2021-01-01' & Date <= '2022-04-28') %>% 
+      #filter(Date >= input$daterange[1] & Date <= input$daterange[2]) %>% 
       group_by(PdvCountry, PdvCity, PdvDistrict, OwnerPhone, Date_de_fin_de_contrat, GPSLatitude, 
                GPSLongitude, categories_contrat, PdvName) %>% 
       summarise(sum_SalesAmount = sum(SalesAmount)) %>% 
