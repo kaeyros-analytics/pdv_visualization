@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/accordion.css">
     <link rel="stylesheet" href="./css/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/form.css"> 
     <link rel="stylesheet" href="./css/headerNav.css">
     <link rel="stylesheet" href="./css/input.css">
     <link rel="stylesheet" href="./css/introtable.css">
@@ -22,24 +22,37 @@
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="./css/introtable.css">
     <link rel="stylesheet" href="./css/dateEntry.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
 
     <!-- Java Script -->
-    <script src="./js/jquery_3_5_1.min.js"></script>
+    <!--<script src="./js/jquery_3_5_1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./bootstrap_4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/dynamicContent.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/dateEntry.js"></script>
+    <script src="./js/form.js"></script>-->
+    <script src="./js/dateEntry.js"></script> 
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
  {{ headContent() }}
- {{ suppressDependencies("bootstrap") }}
+ {{ suppressDependencies("bootstrap") }} 
 </head>
 
 <body>
@@ -135,10 +148,7 @@
                     </div>
                 </div>
 
- <!--                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output mt-4">
-                    <button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter">
-                        <i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button>
-                </div> -->
+                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output filterButton" aria-live="polite"><button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter" title="Filter data" type="button"><i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button></div>
 
                 
             </div>
@@ -256,10 +266,12 @@
                                 <div class="container-fluid">
                                     <div class="row p-0 m-0">
                                         <!-- Here the first plot -->
-                                        <div class="col-lg-6 pr-1 pl-0 PDVplot1">
+                                        <div class="col-lg-6 pr-1 pl-0 ">
                                             <div class="card-header headCard"></i>Title of the first plot</div>
-                                            <img src="./images/img.jpg" height="500" width="100%" alt="">
-                                            abc
+                                          <div class="card-body PDVplot1">
+                                            {{map}}
+                                          </div>
+                                            
                                         </div>
                                         <!-- End of the first plot -->
                                         <!-- Here the second plot -->
@@ -331,7 +343,7 @@
                 console.log(sidebarElement)
                 if (sidebarElement.classList.contains("sidebarNew")) {
                     
-                console.log(100)
+                console.log(100)*/
                     /* sidebarElement.classList.remove("sidebarNew"); */
                 } else {
                     sidebarElement.classList.add("sidebarNew");

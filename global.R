@@ -9,7 +9,7 @@ options(Encoding = "latin1")
 # Loading required libraries
 library(rJava)
 library(shiny)
-library(sf)
+#library(sf)
 library(shinyWidgets)
 library(stringr)
 library(leaflet)
@@ -68,7 +68,10 @@ df_bavaria1 <- df_bavaria1 %>%
 # UI (Tabs) modules
 
 # UI (input) modules
-eval(parse('./R/modules/daterange_filter.R', encoding="UTF-8"))
-eval(parse('./R/modules/contry_filter.R', encoding="UTF-8"))
-eval(parse('./R/modules/city_filter.R', encoding="UTF-8"))
+eval(parse('./R/modules/pdv_daterange_filter.R', encoding="UTF-8"))
+eval(parse('./R/modules/pdv_contry_filter.R', encoding="UTF-8"))
+eval(parse('./R/modules/pdv_city_filter.R', encoding="UTF-8"))
+
+eval(parse('./R/modules/map_sales_amount.R', encoding="UTF-8"))
+
 

@@ -1,9 +1,11 @@
 am
 function(input, output, session) {
   
-  callModule(daterange_server, id = "daterange")
-  callModule(contry_server, id = "country")
-  callModule(city_server, id = "city")
+  #daterange <- callModule(daterange_server, id = "daterange")
+  #country <- callModule(contry_server, id = "country", daterange)
+  #city <- callModule(city_server, id = "city", country)
+  callModule(map_server, id = "map")
+  
   
 
 }

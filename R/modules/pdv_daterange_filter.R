@@ -24,7 +24,8 @@ daterange_ui <- function(id) {
   
 } # end daterange_ui
 
-daterange_server <- function(input, output, session) {
-  daterange = reactive(input$daterange)
+#daterange_server <- function(input, output, session) {
+  #daterange = reactive(input$daterange)
+  #return(daterange)
   
-}
+#}

@@ -20,7 +20,17 @@ daterange_tab_ui <- function(id) {
                    max    = max(df_bavaria1$Date),
                    
                    format = "dd-mm-yyyy",
-                   separator = " - ")
+                   separator = " - "),
+    selectInput(inputId = ns("selected_contry"), "",
+                #choices = unique(sort(df_bavaria1$PdvCountry)),
+                choices = c("All", unique(sort(df_bavaria1$PdvCountry))),
+                selected = 1,
+                selectize = TRUE),
+    selectInput(inputId = ns("selected_city"), "",
+                #choices = unique(sort(df_bavaria1$PdvCountry)),
+                choices = c("All", unique(sort(df_bavaria1$PdvCity))),
+                selected = 1,
+                selectize = TRUE)
   ) # end taList
   
 } # end daterange_ui

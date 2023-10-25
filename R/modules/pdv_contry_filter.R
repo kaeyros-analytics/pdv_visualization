@@ -18,7 +18,7 @@ contry_ui <- function(id) {
   
 } # end client_Id_ui
 
-contry_server <- function(input, output, session) {
-  country = reactive(input$selected_contry)
+#contry_server <- function(input, output, session, daterange) {
+  #country = reactive(input$selected_contry)
   
-}
+#}
