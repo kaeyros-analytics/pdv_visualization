@@ -15,7 +15,7 @@ tabthree_ui <- function(id) {
                     box(width = 6, responsive = TRUE,
                         
                         title = tags$span(style = "color: black; text-align: center; font-weight: bold;",
-                                          "Number of participants by gender"),
+                                          "Volume des ventes par pays"),
                         #height = "400px",
                         solidHeader = TRUE, collapsible = TRUE,
                         #status = "success", # or status = "primary", "warning" , "success", "info", "danger"
@@ -31,7 +31,7 @@ tabthree_ui <- function(id) {
                     box(width = 6, responsive = TRUE, solidHeader = TRUE, collapsible = TRUE, 
                         #br(),
                         title = tags$span(align = "center", style = "color: black; font-weight: bold;", 
-                                          "Age of participants by gender"), #status = "success",
+                                          "Volume des ventes par ville"), #status = "success",
                         
                         #plotly::plotlyOutput('plot4', height = "610px")
                         shinycssloaders::withSpinner(plotly::plotlyOutput(ns('top_service_type'), height = "500px"),
