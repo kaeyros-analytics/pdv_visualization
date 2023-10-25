@@ -38,7 +38,8 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-
+ {{ headContent() }}
+ {{ suppressDependencies("bootstrap") }}
 </head>
 
 <body>
@@ -264,7 +265,7 @@
                                 <!--  {{ tabOneContent }} -->
                             </div>
                             <div class="tab-pane" id={{ tabTwoId }}>
-                                {{ tabTwoContent }}
+                               <!--  {{ tabTwoContent }} -->
                             </div>
                             <!-- <div class="tab-pane" id={{ tabThreeId }}>
                               {{ tabThreeContent }}
