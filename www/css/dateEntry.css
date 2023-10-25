@@ -1,0 +1,40 @@
+.dateEntry{
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.shiny-options-group{
+    margin-left: 30px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.borderInput {
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.year{
+    margin-top: 14%;
+}
+
+.selectItem {
+    padding: 6px 12px;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: -10px;
+}
+
+.sidebarNew {
+    display: none;
+}

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./css/tabset.css">
     <link rel="stylesheet" href="./css/landingpage.css">
     <link rel="stylesheet" href="./css/introtable.css">
+    <link rel="stylesheet" href="./css/dateEntry.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -30,9 +31,9 @@
     <script src="./js/jquery_3_5_1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./bootstrap_4.5.2/js/bootstrap.min.js"></script>
-    <script src="./js/dynamicContent.js"></script>
+    <!-- <script src="./js/dynamicContent.js"></script> -->
     <script src="./js/form.js"></script>
-    <script src="./js/tabs2.js"></script>
+    <script src="./js/dateEntry.js"></script>
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -52,54 +53,85 @@
                     <img alt="Logo Auswärtiges Amt" src="./images/Bavaria-Logo.svg" height="75">
                 </div>
             </div>
-            <div id="filterBox">
-                <div id="filterStates-timeAggregationFilter-timeAggregation"
-                    class="shiny-html-output shiny-bound-output" aria-live="polite"></div>
-                <div id="filterStates-measurementSelection-measurement" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"></div>
-                <div id="filterStates-mapTimeslider-mapTimeslider" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"></div>
-                <div id="filterStates-eventTypeFilter-eventTypeSelection" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"></div>
-                <div id="filterStates-eventTypeFilter-errorHandler" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"><span></span></div>
-                <div id="filterStates-trendline-trendline" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"></div>
-                <div id="filterStates-countrySelection-countrySelection" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"></div>
-                <div id="filterStates-countrySelection-errorHandler" class="shiny-html-output shiny-bound-output"
-                    aria-live="polite"><span></span></div>
-                <div id="provinzauswahl">
-                    <div id="filterStates-provinceSelection-provinceSelection"
-                        class="shiny-html-output shiny-bound-output" aria-live="polite"></div>
-                    <div id="filterStates-provinceSelection-errorHandler" class="shiny-html-output shiny-bound-output"
-                        aria-live="polite"><span></span></div>
+
+
+            <div id="sidebarNew1" class="sidebarNew">
+                <div>
+                    <div class="dateEntry">
+                        <a>Date Entry: </a>
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is filterDateEntry -->
+                    <div class="input-daterange input-group input-group-sm filterDateEntry">
+                        <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
+                            data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
+                        <span class="input-group-text"> - </span>
+                        <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
+                            data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
+                    </div>
+                </div>
+                <div class="year">
+                    <div class="dateEntry">
+                        <a>Aggregation Time </a>
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is yearSelect -->
+                    <div class="selectize-control single plugin-selectize-plugin-a11y yearSelect">
+                        <select class="selectItem borderInput" name="" id="">
+                            <option value="">Year</option>
+                            <option value="">2023</option>
+                            <option value="">2022</option>
+                            <option value="">2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="year">
+                    <div class="dateEntry">
+                        <a>Aggregation Measure </a>
+
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is radioSelect -->
+                    <div class="shiny-options-group radioSelect">
+                        <div class="radio">
+                            <input id="radio1" type="radio" name="radio">
+                            <label for="radio1">Events</label>
+                        </div>
+                        <div class="radio">
+                            <input id="radio2" type="radio" name="radio">
+                            <label for="radio2">Others</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="year">
+                    <div class="dateEntry">
+                        <a>Type POS</a>
+
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is eventTypeSelect -->
+                    <div class="selectize-control single plugin-selectize-plugin-a11y eventTypeSelect">
+                        <select class="selectItem borderInput" name="" id="">
+                            <option value="">Small</option>
+                            <option value="">Medium</option>
+                            <option value="">Big</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <a id="downloadbtn_server-download_serverside"
-                class="btn btn-default shiny-download-link hidden_button shiny-bound-output"
-                href="session/50fb518ba2b01405f4b200180c6489f8/download/downloadbtn_server-download_serverside?w="
-                target="_blank" download="" aria-live="polite">
-                <i class="fa fa-download" role="presentation" aria-label="download icon"></i>
-                Download
-            </a>
-            <a id="downloadData" class="btn btn-default shiny-download-link hidden_button shiny-bound-output" href=""
-                target="_blank" download="" aria-live="polite">
-                <i class="fa fa-download" role="presentation" aria-label="download icon"></i>
-                Download
-            </a>
-
-            <h2>abc</h2>
-
-            <script>
-                console.log("hello")
-                setTimeout(() => {
-                    sidebar = document.getElementById("sidebar-wrapper")
-                    console.log(sidebar)
-                }, 1000)
-            </script>
         </aside>
-
         <!-- Navbar Area -->
         <div id="navbar-wrapper">
             <div id="previewlogo" style="position: absolute; top: 0; right: 0;">
@@ -116,19 +148,17 @@
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div aria-label="Navigationsleiste" class="collapse navbar-collapse" style="font-size: 2rem;" id="navbarNav">
+                    <div aria-label="Navigationsleiste" class="collapse navbar-collapse" style="font-size: 2rem;"
+                        id="navbarNav">
                         <ul class="nav nav-pills">
                             <li class="nav-item active ">
-                                <a data-toggle="pill" href="#About" class=""
-                                    href="#">About</a>
+                                <a data-toggle="pill" href="#About" class="" href="#" id="about">About</a>
                             </li>
                             <li class="nav-item ">
-                                <a data-toggle="pill" href="#PDV"  class="" id="nav_ucdp"
-                                    href="#">PDV</a>
+                                <a data-toggle="pill" href="#PDV" class="" id="nav_ucdp" href="#">PDV</a>
                             </li>
                             <li class="nav-item ">
-                                <a data-toggle="pill" href="#New" class="" id="nav_ucdp"
-                                    href="#">New Table</a>
+                                <a data-toggle="pill" href="#New" class="plot" id="nav_ucdp" href="#">New Table</a>
                             </li>
                             <li class="nav-item">
                                 <a aria-label="Umfrage" class="navDiv">
@@ -182,47 +212,59 @@
         <div id="content-wrapper">
             <div id="content-container">
                 <div class="tab-content">
-                    <div id="About" class="tab-pane active">
-                        <h2>Allgemeine Informationen</h2>
-    
+                    <div id="About" class="tab-pane active" >
+                        <h2>General Information</h2>
+
                         <p>
-                            Der Konfliktexplorer wurde auf Basis von bisherigem Nutzerfeedback und den gesammelten
-                            Erfahrungen weiterentwickelt. Insbesondere wurde hierbei Wert auf eine höhere
-                            Nutzerfreundlichkeit gelegt.
-                            So wurden die anfänglich hohen Ladezeiten auf ein notwendiges Minimum so weit es ging
-                            reduziert.
-                            Darüber hinaus wurde das Design an moderne Webseiten angeglichen.
-                            Nunmehr sollte der Konfliktexplorer mit allen im AA verfügbaren Endgerät aufruf- und
-                            bedienbar sein.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere. <br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.<br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.<br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.
+
+
                         </p>
                     </div>
-                    <div id="PDV" class="tab-pane ">
-                        <div class="tab-content ">
+                    <div id="PDV" class="tab-pane " >
+                        <div class="tab-content " >
                             <div class="tab-pane active" id={{ tabOneId }}>
-                        
-                              <div class="container-fluid">
-                                <div class="row p-0 m-0">
-                                  <!-- Here the first plot -->
-                                  <div class="col-lg-6 pr-1 pl-0">
-                                    <div class="card-header"></i>Title of the first plot</div>
-                                    <img src="./images/img.jpg" height="500" width="100%" alt="">
-                                    abc
-                                  </div>
-                                  <!-- End of the first plot -->
-                                  <!-- Here the second plot -->
-                                  <div class="col-lg-6 pl-1 pr-0">
-                                    <div class="card-header">Title of the second plot</div>
-                                    <img src="./images/img.jpg" height="500" width="100%" alt="">
-                                    abc
-                                  </div>
-                                  <!-- End of the second plot -->
+
+                                <div class="container-fluid">
+                                    <div class="row p-0 m-0">
+                                        <!-- Here the first plot -->
+                                        <div class="col-lg-6 pr-1 pl-0 PDVplot1">
+                                            <div class="card-header headCard"></i>Title of the first plot</div>
+                                            <img src="./images/img.jpg" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the first plot -->
+                                        <!-- Here the second plot -->
+                                        <div class="col-lg-6 pl-1 pr-0 PDVplot2">
+                                            <div class="card-header">Title of the second plot</div>
+                                            <img src="./images/img.jpg" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the second plot -->
+                                    </div>
                                 </div>
-                              </div>
-                        
-                             <!--  {{ tabOneContent }} -->
+
+                                <!--  {{ tabOneContent }} -->
                             </div>
                             <div class="tab-pane" id={{ tabTwoId }}>
-                              {{ tabTwoContent }}
+                                {{ tabTwoContent }}
                             </div>
                             <!-- <div class="tab-pane" id={{ tabThreeId }}>
                               {{ tabThreeContent }}
@@ -230,24 +272,97 @@
                             <div class="tab-pane" id={{ tabFourId }}>
                               {{ tabFourContent }}
                             </div> -->
-                          </div>
+                        </div>
                     </div>
-                    <div id="New" class="tab-pane ">
-                        <p>
-                            Der Konfliktexplorer wurde auf Basis von bisherigem Nutzerfeedback und den gesammelten
-                            Erfahrungen weiterentwickelt. Insbesondere wurde hierbei Wert auf eine höhere
-                            Nutzerfreundlichkeit gelegt.
-                            So wurden die anfänglich hohen Ladezeiten auf ein notwendiges Minimum so weit es ging
-                            reduziert.
-                            Darüber hinaus wurde das Design an moderne Webseiten angeglichen.
-                            Nunmehr sollte der Konfliktexplorer mit allen im AA verfügbaren Endgerät aufruf- und
-                            bedienbar sein.
-                        </p>
+                    <div id="visualization" class="tab-pane ">
+                        <div class="tab-content ">
+                            <div class="tab-pane active" id={{ tabOneId }}>
+
+                                <div class="container-fluid">
+                                    <div class="row p-0 m-0">
+                                        <!-- Here the first plot -->
+                                        <div class="col-lg-6 pr-1 pl-0 Visualplot1">
+                                            <div class="card-header headCard"></i>Title of the first plot</div>
+                                            <img src="./images/plot2.png" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the first plot -->
+                                        <!-- Here the second plot -->
+                                        <div class="col-lg-6 pl-1 pr-0 Visualplot2">
+                                            <div class="card-header">Title of the second plot</div>
+                                            <img src="./images/plot2.png" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the second plot -->
+                                    </div>
+                                </div>
+
+                                <!--  {{ tabOneContent }} -->
+                            </div>
+                            <div class="tab-pane" id={{ tabTwoId }}>
+                                {{ tabTwoContent }}
+                            </div>
+                            <!-- <div class="tab-pane" id={{ tabThreeId }}>
+                              {{ tabThreeContent }}
+                            </div>
+                            <div class="tab-pane" id={{ tabFourId }}>
+                              {{ tabFourContent }}
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-  
+
+        <script>
+/*             console.log("hello")
+            setTimeout(() => {
+                sidebar = document.getElementById("sidebarNew")
+                console.log(sidebar)
+            }, 1000) */
+
+            let pdv = document.getElementById("nav_ucdp")
+            let visualization = document.getElementById("visualization")
+            let about = document.getElementById("about")
+            let plot = document.getElementsByClassName("plot")
+            console.log(plot.item(0))
+            console.log(pdv)
+
+            pdv.addEventListener("click", showSidebar)
+            plot.item(0).addEventListener("click", showSidebar)
+            about.addEventListener("click", disableSidebar)
+
+            
+
+            function showSidebarElement() {
+                var sidebarElement = document.getElementById("sidebarNew1");
+                console.log(sidebarElement)
+                if (sidebarElement.classList.contains("sidebarNew")) {
+                    
+                console.log(100)
+                    /* sidebarElement.classList.remove("sidebarNew"); */
+                } else {
+                    sidebarElement.classList.add("sidebarNew");
+                console.log(200)
+                }
+            } 
+            function showSidebar() {
+                var sidebarElement = document.getElementById("sidebarNew1");
+                console.log(2000)
+                sidebarElement.classList.remove("sidebarNew");
+            } 
+            function disableSidebar() {
+                var sidebarElement = document.getElementById("sidebarNew1");
+                console.log(2000)
+                sidebarElement.classList.add("sidebarNew");
+            }  
+            
+            
+            
+            showSidebarElement()
+
+        </script>
+
 
 
 

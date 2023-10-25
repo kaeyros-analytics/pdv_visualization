@@ -2,7 +2,7 @@
 #legendWrapper {
   display: inline-block;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 275px;
   left: 0px;
 }
 
@@ -57,7 +57,7 @@ ul.nav>li {
     
   @media (min-width: 577px) {
     #wrapper {
-      padding-left: 250px;
+      padding-left: 275px;
     }
     
     #wrapper.toggled {
@@ -69,7 +69,7 @@ ul.nav>li {
     }
   
     #sidebar-wrapper {
-      width: 250px;
+      width: 275px;
     }
     
     #wrapper.toggled #sidebar-wrapper {
@@ -79,12 +79,12 @@ ul.nav>li {
     
     #wrapper.toggled #navbar-wrapper {
       position: absolute;
-      margin-right: -250px;
+      margin-right: -225px;
   }
     
     #wrapper.toggled #content-wrapper {
       position: absolute;
-      margin-right: -250px;
+      margin-right: -225px;
     }
   
     #navbar-wrapper {
@@ -119,17 +119,17 @@ ul.nav>li {
     }
   
     #wrapper.toggled #sidebar-wrapper {
-      width: 250px;
+      width: 275px;
     }
     
     #wrapper.toggled #navbar-wrapper {
       position: absolute;
-      margin-right: -250px;
+      margin-right: -225px;
     }
   
     #wrapper.toggled #content-wrapper {
       position: absolute;
-      margin-right: -250px;
+      margin-right: -225px;
     }
   
     #navbar-wrapper {
@@ -137,7 +137,7 @@ ul.nav>li {
     }
   
     #wrapper.toggled {
-      padding-left: 250px;
+      padding-left: 275px;
     }
   
     #content-wrapper {
@@ -148,6 +148,6 @@ ul.nav>li {
     #wrapper.toggled #navbar-wrapper,
     #wrapper.toggled #content-wrapper {
       position: relative;
-      margin-right: 250px;
+      margin-right: 275px;
     }
   }

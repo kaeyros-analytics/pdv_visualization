@@ -113,7 +113,9 @@ input-group-sm>.custom-select, .input-group-sm>.form-control, .input-group-sm>.i
 
 .input-group {
   width: 80% !important;
-  margin-left: 20px !important;
+  margin-left: 10px !important;
+  display: flex !important;
+  flex-wrap: nowrap  !important;
 }
 
 .input-group-text {
