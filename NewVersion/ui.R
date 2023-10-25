@@ -55,7 +55,7 @@ ui <- dashboardPage(skin = "black",
           
             tabone_ui("company"),
             #tabfive_ui("external_company"),
-            tabtwo_ui("growth"),
+            #tabtwo_ui("growth"),
             tabthree_ui("sales_growth"),
             tabfour_ui("operational")
         )  # end tabsetPanel

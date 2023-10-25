@@ -18,14 +18,6 @@ library(lubridate)
 root <- getwd()
 path_helpers <- paste(root, "/R", sep="")
 path_data <- paste(path_helpers, "/", "Data", sep="")
-#path_data <- paste(root, "/", "data", sep="")
-#path_helpers <- paste(root, "/codes/helpers", sep="")
-#path_meta <- paste(root, "/", "meta", sep="")
-
-# data path
-file.data <- paste(path_data, "/presence_worshop_sch_new123.xlsx", sep="")
-file.data2 <- paste(path_data, "/df_age_group_gender.csv", sep="")
-file.data3 <- paste(path_data, "/workshop_expectations.xlsx", sep="")
 
 file.data1 <- paste(path_data, "/Cashback_BAVARIA__Fridge_inventory_Jul_2023_corrected_new1.xlsx", sep="")
 df_bavaria1 <- readxl::read_excel(file.data1)
@@ -49,46 +41,6 @@ df_bavaria1 <- df_bavaria1 %>%
       difftime(df_bavaria1$Date_de_fin_de_contrat, today(), units = "days") <= 30 ~ "orange",
     difftime(df_bavaria1$Date_de_fin_de_contrat, today(), units = "days") > 30 ~ "darkgreen"
   ))
-
-# read data
-df_age_group_gender <- read.csv(file.data2)
-
-df_expectations <- readxl::read_excel(file.data3)
-
-df_workshop <- readxl::read_excel(file.data)
-
-df_workshop$`Date de naissance` <-  as.Date(df_workshop$`Date de naissance`)
-df_workshop$Date <-  as.Date(df_workshop$Date)
-
-# Display the data frame where Presence != "NA" 
-clean_df_workshop <- df_workshop %>% 
-  filter(!is.na(Presence))
-
-# count number of attendance per day
-df_presence_per_sexe <- clean_df_workshop %>%
-  filter(Presence == "present") %>%
-  group_by(Date, Sexe) %>%
-  dplyr::count(Presence)
-df_presence_per_sexe <- as.data.frame(df_presence_per_sexe)
-
-# count number of attendance per day
-df_presence_all <- clean_df_workshop %>%
-  filter(Presence == "present")  %>%
-  group_by(Date) %>%
-  dplyr::count(Presence)
-
-# Create the variable Sexe and add the values All to the data frame  df_presence_all
-df_presence_all$Sexe <- c("All", "All", "All")
-
-df_presence <- rbind(df_presence_all,df_presence_per_sexe)
-
-df_presence <- as.data.frame(df_presence)
-
-#Change the column name - `Domaine d'étude` to Domaine_detude
-df_etude <- clean_df_workshop %>% 
-  rename("Domaine_detude" = `Domaine d'étude`)
-#table(df_etude$Domaine_detude,useNA = 'ifany')
-
 
 
 # UI (Tabs) modules

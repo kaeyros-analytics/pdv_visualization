@@ -5,7 +5,7 @@ tabfour_ui <- function(id) {
   
   tabPanel(responsive = TRUE,
            
-           strong("Sector and university"), #icon = icon("line-chart"),
+           strong("Volume des ventes par Categorie"), #icon = icon("line-chart"),
            br(),
            br(),
            
@@ -14,7 +14,7 @@ tabfour_ui <- function(id) {
                     box(width = 6, responsive = TRUE, solidHeader = TRUE, collapsible = TRUE,
                         br(),
                         title = tags$span(align = "center", style = "color: black; font-weight: bold;", 
-                                          "Number of participants per sector"),
+                                          "Volume des vente par categorie"),
                         br(),
                         #plotly::plotlyOutput('plot3', height = "610px")
                         shinycssloaders::withSpinner(plotly::plotlyOutput(ns('plot_title'), height = "500px")
@@ -25,10 +25,10 @@ tabfour_ui <- function(id) {
                     box(width = 6, responsive = TRUE, solidHeader = TRUE, collapsible = TRUE,
                         br(),
                         title = tags$span(align = "center", style = "color: black; font-weight: bold;", 
-                                          "Number of participants per universtity"),
+                                          "Top 10 Volume des ventes par par propriétaire"),
                         br(),
                         #plotly::plotlyOutput('plot4', height = "610px")
-                        shinycssloaders::withSpinner(plotly::plotlyOutput(ns('plot_type'), height = "500px"),
+                        shinycssloaders::withSpinner(DT::dataTableOutput(ns('plot_type'), height = "500px"),
                                                      type = 8, color = 'grey'))
            )  # end second fluidRow
   )  # end tabPanel Operational

@@ -5,7 +5,7 @@ tabthree_ui <- function(id) {
   
   tabPanel(responsive = TRUE,
            
-           strong("Gender"), #icon = icon("line-chart"),
+           strong("Volume des vente Pays/Ville"), #icon = icon("line-chart"),
            br(),
            
            br(),

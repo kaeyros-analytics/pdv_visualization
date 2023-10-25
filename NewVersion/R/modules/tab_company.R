@@ -4,7 +4,7 @@ tabone_ui <- function(id) {
   
   tabPanel(responsive = TRUE,
            
-           strong("Attendance"), #icon = icon("line-chart"),
+           strong("La Carte"), #icon = icon("line-chart"),
            br(),
            br(),
            # create the place and position for the graph
