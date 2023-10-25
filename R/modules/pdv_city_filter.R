@@ -19,7 +19,9 @@ city_ui <- function(id) {
   
 } # end client_Id_ui
 
-city_server <- function(input, output, session) {
+city_server <- function(input, output, session, country) {
+  
+  
   city = reactive(input$selected_city)
   
 }

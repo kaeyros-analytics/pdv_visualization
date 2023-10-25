@@ -1,9 +1,8 @@
 
-
 #---------------------
 # CREATE UI FUNCTION
 #---------------------
-daterange_ui <- function(id) {
+tab3_daterange_ui <- function(id) {
   
   # NS(): Assign module elements to a unique namespace
   # `NS(id)` returns a namespace function, which was save as `ns` and will
@@ -22,9 +21,4 @@ daterange_ui <- function(id) {
                    separator = " - ")
   ) # end taList
   
-} # end daterange_ui
-
-daterange_server <- function(input, output, session) {
-  daterange = reactive(input$daterange)
-  
-}
+} # end tab3_daterange_ui
