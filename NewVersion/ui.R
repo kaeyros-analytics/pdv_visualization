@@ -6,7 +6,7 @@ ui <- dashboardPage(skin = "black",
     # ----------------
     
     
-    dashboardHeader(title = "Data Driven Workshop", titleWidth = '450'), # end dashboardHeader
+    dashboardHeader(title = "", titleWidth = '450'), # end dashboardHeader
     
     # -----------------
     # DASHBOARDSIDEBAR

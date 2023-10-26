@@ -20,14 +20,15 @@ trans_service_title_server <- function(input, output, session) {
     internal_fig_billers <- plotly::plot_ly(df_bavaria_category, x =~PdvCategory, y =~sum_SalesAmount, type = 'bar',
                                             #mode = "text", 
                                             #textangle = 360, extposition = 'outside'
-                                            text = ~paste(formatC(sum_SalesAmount, format = "d",big.mark = "."), "€"), textposition = 'outside',
+                                            text = ~paste(formatC(sum_SalesAmount, format = "d",big.mark = "."),"€"), textposition = 'outside',
+                                            #textfont = list(size = 5),
                                             hovertext = paste("Date :", df_bavaria_category$PdvCategory,
                                                               "<br>Volume des ventes :", paste(formatC(df_bavaria_category$sum_SalesAmount, format = "d",big.mark = "."), "€")),
                                             hoverinfo = 'text',
                                             marker = list(color = "darkviolet",
                                                           line = list(color = "white",  width = 1.5))) %>%
       layout(title = "",
-             uniformtext=list(minsize=15, mode='show'),
+             uniformtext=list(minsize=12, mode='show'),
              xaxis = list(title = "<b> PDV Category </b>", #font = list(size = 0),
                           # change x-axix size
                           tickfont = list(size = 14),

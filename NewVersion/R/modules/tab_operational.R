@@ -14,7 +14,7 @@ tabfour_ui <- function(id) {
                     box(width = 6, responsive = TRUE, solidHeader = TRUE, collapsible = TRUE,
                         br(),
                         title = tags$span(align = "center", style = "color: black; font-weight: bold;", 
-                                          "Volume des vente par categorie"),
+                                          "Volume des ventes par categorie"),
                         br(),
                         #plotly::plotlyOutput('plot3', height = "610px")
                         shinycssloaders::withSpinner(plotly::plotlyOutput(ns('plot_title'), height = "500px")

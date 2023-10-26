@@ -4,14 +4,14 @@ tabone_ui <- function(id) {
   
   tabPanel(responsive = TRUE,
            
-           strong("La Carte"), #icon = icon("line-chart"),
+           strong("Map"), #icon = icon("line-chart"),
            br(),
            br(),
            # create the place and position for the graph
            fluidRow(width = 12, responsive = TRUE,
                     box(width = 12, responsive = TRUE,
                         
-                        title = tags$span(style = "color: black; text-align: center; font-weight: bold;", "Attendance list per day"),
+                        title = tags$span(style = "color: black; text-align: center; font-weight: bold;", ""),
                         #title = "Transaction Volume Vs. Revenue over Time", 
                         #status= "info", #3D85C6
                         solidHeader = TRUE, collapsible = TRUE,  

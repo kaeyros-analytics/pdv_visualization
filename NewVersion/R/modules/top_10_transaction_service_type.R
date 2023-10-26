@@ -11,7 +11,7 @@ top_service_type_server <- function(input, output, session) {
     
     df_bavaria_test2 <- df_bavaria1 %>% 
       #filter(between(Date, as.Date('2022-01-20'), as.Date('2022-02-20'))) %>% 
-      filter(Date >= '2021-01-01' & Date <= '2023-07-28') %>% 
+      filter(Date >= '2022-05-01' & Date <= '2023-07-28') %>% 
       group_by(PdvCity, Date) %>% 
       summarise(sum_SalesAmount = sum(SalesAmount))
     
