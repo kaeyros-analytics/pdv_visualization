@@ -1,23 +1,63 @@
 
-# Html template used to render UI
-ui <- htmlTemplate("www/index.html",
-                   daterangeid = daterange_ui("pdv"),
-                   countryid = contry_ui("pdv"),
-                   cityid = city_ui("pdv"),
-                   map = map_ui("pdv")#,
-                   #daterange_tab_ui("tab")
-                   
-                   #var3_selectclientid = tab3_client_id_ui("tab3"),
-                   #var3_selectmachineid = tab3_machine_id_ui("tab3"),
-                   #var3_selectdate = tab3_daterange_ui("tab3"),
-                   #var3_select_calculate_button  = tab3_calculate_button_ui("tab3"),
-                   #plot_dynamic_inflation = plot_dynamic_inflation_ui("tab3"),
-                   #plot_dynamic_cons_conf = plot_dynamic_cons_conf_ui("tab3"),
-                   #plot_dynamic_DEU_dmd = plot_dynamic_DEU_dmd_ui("tab3"),
-                   #plot_dynamic_DEU_prd = plot_dynamic_DEU_prd_ui("tab3")
-                   
-                   
-                   
-                   
-
-) #  end ui
+ui <- dashboardPage(skin = "black",
+    
+    # ----------------
+    # DASHBOARDHEADER
+    # ----------------
+    
+    
+    dashboardHeader(title = "", titleWidth = '450'), # end dashboardHeader
+    
+    # -----------------
+    # DASHBOARDSIDEBAR
+    # -----------------
+    
+    dashboardSidebar(disable = TRUE), # end dashboardSidebar (disable = TRUE means no display sidebar)
+    
+    
+    # --------------
+    # DASHBOARDBODY
+    # --------------
+    
+    
+    dashboardBody(
+        
+        tags$head(tags$style(HTML('
+      .main-header .logo {
+        font-family: "Georgia", Times, "Times New Roman", serif;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      
+      /* body change background color*/
+      .content-wrapper, .right-side {
+      background-color: aliceblue;
+      
+      }
+      
+    '))), ## end title size and format  #F5F5F5 rgb(228, 247, 235)
+        
+        # fixed header
+        tags$script(HTML("$('body').addClass('fixed');")),
+        
+        # tags$head(
+        #   tags$link(
+        #     rel = "stylesheet",
+        #     type = "text/css",
+        #     href = "www/css/body.css"),
+        # )
+        
+        #shinythemes::themeSelector()
+        theme = shinythemes::shinytheme("readable"),
+        br(),
+        
+        tabsetPanel(
+          
+            tabone_ui("company"),
+            #tabfive_ui("external_company"),
+            #tabtwo_ui("growth"),
+            tabthree_ui("sales_growth"),
+            tabfour_ui("operational")
+        )  # end tabsetPanel
+    )  # end dashboardBody
+) # end dashboardPage
