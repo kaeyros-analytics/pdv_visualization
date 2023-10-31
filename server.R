@@ -1,25 +1,13 @@
 
+
 server <- function(input, output, session) {
   
   
-    callModule(transaction_server, id = "company")
+  callModule(map_server, id = "map")
+  callModule(volume_vente_pays_server, id = "volume_vente")
+  callModule(volume_vente_ville_server, id = "volume_vente")
+  callModule(volume_vente_category_server, id = "vente_category")
+  callModule(top10_vente_category_server, id = "vente_category")
+  
 
-    # agent growth
-     
-    #callModule(table_agent_server, id = "growth")
-    #callModule(top_agent_server, id = "growth")
-    
-    # Sales growth
-    
-    callModule(table_trans_service_type_server, id = "sales_growth")
-    callModule(top_service_type_server, id = "sales_growth")
-    
-    # Oprational Dashbord
-    callModule(trans_service_title_server, id = "operational")
-    callModule(trans_service_type_server, id = "operational")
-    
-    
-   
-    
-    
 } # end server

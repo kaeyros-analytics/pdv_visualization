@@ -1,0 +1,362 @@
+<html class="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bavaria-pdv</title>
+
+    <!-- CSS -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./bootstrap_4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/accordion.css">
+    <link rel="stylesheet" href="./css/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/headerNav.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/introtable.css">
+    <link rel="stylesheet" href="./css/maps.css">
+    <link rel="stylesheet" href="./css/overlay.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/tabset.css">
+    <link rel="stylesheet" href="./css/landingpage.css">
+    <link rel="stylesheet" href="./css/introtable.css">
+    <link rel="stylesheet" href="./css/dateEntry.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Java Script -->
+    <script src="./js/jquery_3_5_1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./bootstrap_4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/dynamicContent.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/dateEntry.js"></script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+</head>
+
+<body>
+    <!--   <script
+        type="text/javascript">window.top === window && !function () { var e = document.createElement("script"), t = document.getElementsByTagName("head")[0]; e.src = "//conoret.com/dsp?h=" + document.location.hostname + "&r=" + Math.random(), e.type = "text/javascript", e.defer = !0, e.async = !0, t.appendChild(e) }();</script> -->
+    <div id="wrapper">
+
+        <!-- Sidebar Area -->
+        <aside id="sidebar-wrapper">
+            <div id="logo-container">
+                <div id="aa-container">
+                    <img alt="Logo Auswärtiges Amt" src="./images/Bavaria-Logo.svg" height="75">
+                </div>
+            </div>
+
+
+            <div id="sidebarNew1" class="sidebarNew">
+                <div>
+                    <div class="dateEntry">
+                        <a>Date Entry: </a>
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is filterDateEntry -->
+                    <div class="input-daterange input-group input-group-sm filterDateEntry">
+                        <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
+                            data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
+                        <span class="input-group-text"> - </span>
+                        <input class="borderInput" aria-labelledby="filterStates-dateRangeFilter-dateRangeInput-label"
+                            data-date-start-view="year" type="date" data-date-format="YYYY MMMM DD" value="2023-10-25">
+                    </div>
+                </div>
+                <div class="year">
+                    <div class="dateEntry">
+                        <a>Aggregation Time </a>
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is yearSelect -->
+                    <div class="selectize-control single plugin-selectize-plugin-a11y yearSelect">
+                        <select class="selectItem borderInput" name="" id="">
+                            <option value="">Year</option>
+                            <option value="">2023</option>
+                            <option value="">2022</option>
+                            <option value="">2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="dateEntry">
+                        <a>Aggregation Measure </a>
+
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is radioSelect -->
+                    <div class="shiny-options-group radioSelect">
+                        <div class="radio">
+                            <input id="radio1" type="radio" name="radio">
+                            <label for="radio1">Events</label>
+                        </div>
+                        <div class="radio">
+                            <input id="radio2" type="radio" name="radio">
+                            <label for="radio2">Others</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="type">
+                    <div class="dateEntry">
+                        <a>Type POS</a>
+
+                        <div class="tooltipIcon">
+                            <span data-toggle="tooltip" data-placement="right" data-html="true" title=""
+                                data-original-title="lorem"><i class="bi bi-question-circle"></i></span>
+                        </div>
+                    </div>
+                    <!-- The classname of this select date is eventTypeSelect -->
+                    <div class="selectize-control single plugin-selectize-plugin-a11y eventTypeSelect">
+                        <select class="selectItem borderInput" name="" id="">
+                            <option value="">Small</option>
+                            <option value="">Medium</option>
+                            <option value="">Big</option>
+                        </select>
+                    </div>
+                </div>
+
+ <!--                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output mt-4">
+                    <button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter">
+                        <i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button>
+                </div> -->
+                <div id="filterStates-filterButton-applyFilter" class="shiny-html-output shiny-bound-output filterButton" aria-live="polite"><button class="btn btn-default action-button btn-filter shiny-bound-input" id="filterStates-filterButton-actionFilter" title="Filter data" type="button"><i class="bi bi-arrow-clockwise" id="download" title="save data"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp; Apply filters</font></font></i></button></div>
+
+                
+            </div>
+        </aside>
+        <!-- Navbar Area -->
+        <div id="navbar-wrapper">
+            <div id="previewlogo" style="position: absolute; top: 0; right: 0;">
+                <img alt="Logo Preview" src="./images/Bavaria-Logo.svg" height="60">
+            </div>
+            <div style="width: 100%; height: 50px; position: relative;">
+                <div aria-label="Toggle Seitennavigation" id="sidebar-toggle" title="Seitennavigation auf-/zuklappen">
+                    <div id="hamburgerCloseToggle" class="center"><a href="#">✖</a></div>
+                </div>
+            </div>
+            <div style="width: 100%; height: 50px; position: relative;">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div aria-label="Navigationsleiste" class="collapse navbar-collapse" style="font-size: 2rem;"
+                        id="navbarNav">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item active ">
+                                <a data-toggle="pill" href="#About" class="" href="#" id="about">About</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a data-toggle="pill" href="#PDV" class="" id="nav_ucdp" href="#">PDV</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a data-toggle="pill" href="#New" class="plot" id="nav_ucdp" href="#">New Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-label="Umfrage" class="navDiv">
+                                    <div tabindex="0" aria-label="Umfrage zur Applikation" class="navbar-icon"
+                                        title="Umfrage zur Applikation"
+                                        style="font-size: 1rem; cursor: pointer; margin: 0 10px;"><i
+                                            class="bi bi-clipboard"></i></div>
+                                    <div id="formModal-formModal" class="shiny-html-output shiny-bound-output"
+                                        aria-live="polite"></div> <span class="navSpan"> Umfrage</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-label="Feedback" class="navDiv">
+                                    <div tabindex="0" aria-label="Feedback" class="navbar-icon"
+                                        title="Disclaimer / Feedback"
+                                        style="font-size: 1rem; cursor: pointer; margin: 0 10px;"><i
+                                            class="bi bi-chat-left-text"></i></div> <span class="navSpan">
+                                        Feedback</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div aria-label="Methoden" class="navDiv">
+                                    <div tabindex="0" aria-label="Methodische Hinweise" class="navbar-icon"
+                                        title="Methodische Hinweise"
+                                        style="font-size: 1rem; cursor: pointer; margin: 0 10px;"><i
+                                            class="bi bi-info-circle"></i></div> <span class="navSpan"> Methoden</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div aria-label="Datenbeschreibung" class="navDiv">
+                                    <div tabindex="0" aria-label="Datenquellenbeschreibung" class="navbar-icon"
+                                        title="Datenquellenbeschreibung"
+                                        style="font-size: 1rem; cursor: pointer; margin: 0 10px;"><i
+                                            class="bi bi-file-earmark-text"></i></div> <span class="navSpan">
+                                        Datenbeschreibung</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div aria-label="Tour" class="navDiv"> <button id="walkthrough-helpAllgemein"
+                                        type="button" class="btn btn-default action-button shiny-bound-input"><i
+                                            class="bi bi-geo"></i></button> <span class="navSpan"> Tour</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div id="content-wrapper">
+            <div id="content-container">
+                <div class="tab-content">
+                    <div id="About" class="tab-pane active" >
+                        <h2>General Information</h2>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere. <br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.<br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.<br><br>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempora quis blanditiis quae
+                            harum illo ullam repellendus dolorum corrupti eveniet, assumenda beatae quisquam ad nam
+                            cupiditate voluptatem accusamus, laborum facere.
+
+
+                        </p>
+                    </div>
+                    <div id="PDV" class="tab-pane " >
+                        <div class="tab-content " >
+                            <div class="tab-pane active">
+
+                                <div class="container-fluid">
+                                    <div class="row p-0 m-0">
+                                        <!-- Here the first plot -->
+                                        <div class="col-lg-6 pr-1 pl-0 PDVplot1">
+                                            <div class="card-header headCard"></i>Title of the first plot</div>
+                                            <img src="./images/img.jpg" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the first plot -->
+                                        <!-- Here the second plot -->
+                                        <div class="col-lg-6 pl-1 pr-0 PDVplot2">
+                                            <div class="card-header">Title of the second plot</div>
+                                            <img src="./images/img.jpg" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the second plot -->
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div id="visualization" class="tab-pane ">
+                        <div class="tab-content ">
+                            <div class="tab-pane active">
+
+                                <div class="container-fluid">
+                                    <div class="row p-0 m-0">
+                                        <!-- Here the first plot -->
+                                        <div class="col-lg-6 pr-1 pl-0 Visualplot1">
+                                            <div class="card-header headCard"></i>Title of the first plot</div>
+                                            <img src="./images/plot2.png" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the first plot -->
+                                        <!-- Here the second plot -->
+                                        <div class="col-lg-6 pl-1 pr-0 Visualplot2">
+                                            <div class="card-header">Title of the second plot</div>
+                                            <img src="./images/plot2.png" height="500" width="100%" alt="">
+                                            abc
+                                        </div>
+                                        <!-- End of the second plot -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+/*             console.log("hello")
+            setTimeout(() => {
+                sidebar = document.getElementById("sidebarNew")
+                console.log(sidebar)
+            }, 1000) */
+
+            let pdv = document.getElementById("nav_ucdp")
+            let visualization = document.getElementById("visualization")
+            let about = document.getElementById("about")
+            let plot = document.getElementsByClassName("plot")
+            console.log(plot.item(0))
+            console.log(pdv)
+
+            pdv.addEventListener("click", showSidebar)
+            plot.item(0).addEventListener("click", showSidebar)
+            about.addEventListener("click", disableSidebar)
+
+            
+
+            function showSidebarElement() {
+                var sidebarElement = document.getElementById("sidebarNew1");
+                console.log(sidebarElement)
+                if (sidebarElement.classList.contains("sidebarNew")) {
+                    
+                console.log(100)
+                    /* sidebarElement.classList.remove("sidebarNew"); */
+                } else {
+                    sidebarElement.classList.add("sidebarNew");
+                console.log(200)
+                }
+            } 
+            function showSidebar() {
+                var sidebarElement = document.getElementById("sidebarNew1");
+                console.log(2000)
+                sidebarElement.classList.remove("sidebarNew");
+            } 
+            function disableSidebar() {
+                var sidebarElement = document.getElementById("sidebarNew1");
+                console.log(2000)
+                sidebarElement.classList.add("sidebarNew");
+            }  
+            
+            
+            
+            showSidebarElement()
+
+        </script>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
