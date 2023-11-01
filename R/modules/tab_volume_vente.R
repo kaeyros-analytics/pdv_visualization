@@ -83,3 +83,21 @@ tab_volume_vente_ui <- function(id) {
   
 }
 
+tab_volume_vente_server <- function(input, output, session) {
+  
+  observeEvent(input$pdvcountry,{
+    
+    if(input$pdvcountry == "All"){
+      choice = c("All")
+      
+    } else {
+      choice=unique(df_bavaria1$PdvCity[df_bavaria1$PdvCountry==input$pdvcountry])
+    }
+    
+    updateSelectInput(session,'pdvcity',
+                      choices = choice,
+                      selected = choice[1])
+  }) 
+  
+}
+

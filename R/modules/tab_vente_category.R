@@ -76,7 +76,25 @@ tab_vente_category_ui <- function(id) {
   )  # end tabPanel Operational
   
   
-} # end tabfour_ui
+} # end tab_vente_category_ui
+
+tab_vente_category_server <- function(input, output, session) {
+  
+  observeEvent(input$pdvcountry2,{
+    
+    if(input$pdvcountry2 == "All"){
+      choice = c("All")
+      
+    } else {
+      choice=unique(df_bavaria1$PdvCity[df_bavaria1$PdvCountry==input$pdvcountry2])
+    }
+    
+    updateSelectInput(session,'pdvcity2',
+                      choices = choice,
+                      selected = choice[1])
+  }) 
+  
+}
 
 
 
