@@ -40,47 +40,19 @@ top10_vente_category_server <- function(input, output, session) {
     top_ten_owner1 <- head(top_ten_owner, 10)
     
     
-    DT::datatable(top_ten_owner1, 
-                  extensions = 'Buttons', rownames = TRUE, class = 'cell-border stripe', filter = 'top',
+    DT::datatable(top_ten_owner1,
+                  extensions = 'Scroller', rownames = TRUE, class = 'cell-border stripe', filter = 'top',
                   colnames = c('Nr.' = 1, 'Propriétaire' = 2, 'Ville' = 3, 'Pvd Category' = 4, 'Transaction volume' = 6),
-                  caption = htmltools::tags$caption(
-                    style = 'caption-side: bottom; text-align: center;',
-                    'Tabelle: ', htmltools::strong('Top 10 des meilleurs ventes par categprie')
-                  ),
-                  #colnames = c('Nr.' = 1, 'Ebene' = 2, 'Pflege 2019' = 3, 'Pflege 2020' = 4),
-                  # Change button download color
-                  # callback=JS('$("button.buttons-copy").css("background","red"); 
-                  #     $("button.buttons-collection").css("background","green"); 
-                  #     return table;'),
-                  # https://stackoverflow.com/questions/55931341/using-icons-for-shiny-renderdatatable-extension-buttons
-                  #
-                  options = list(dom = 'Brtip', # remove the box search on the top right side and the show entries on the top left side
-                                 #searchHighlight = TRUE,
-                                 #buttons = c('csv', 'excel', 'pdf'),
-                                 buttons = 
-                                   list(list(
-                                     extend = "collection", 
-                                     buttons = list(
-                                       # Add a title of each format style
-                                       list(extend = "excel", title = "",
-                                            exportOptions = list(
-                                              modifier = list(page = "all")
-                                            ))),
-                                     #text = '<span class="glyphicon glyphicon-download-alt"></span>'
-                                     #text = '<span class="glyphicon glyphicon-download-alt"></span>'
-                                     #text =  '<i class="fa fa-download"></i>'
-                                     text = "Download"
-                                   )),
-                                 searching = TRUE,
+                  options = list(dom = 't', # remove the box search on the top right side and the show entries on the top left side
+                                 searchHighlight = TRUE,
                                  # mark = list(accuracy = "exactly"),
-                                 #deferRender = TRUE,
-                                 #scrollY = 300,
+                                 # deferRender = TRUE,
+                                 # scrollY = 195,
                                  #scroller = TRUE, # remove the number of pages at the bottom with scroller = TRUE
                                  # search = list(regex = FALSE, caseInsensitive = TRUE, search=''),
                                  # #lengthMenu = list(c(5, 150, -1), c('5', '150', 'All')),
-                                 #pageLength = nrow(top_ten_owner1), #lengthMenu = c(10,20,30,40,50),
+                                 # pageLength = 100, #lengthMenu = c(10,20,30,40,50),
                                  # autoWidth = FALSE,
-                                 # darkcyan dodgerblue
                                  initComplete = JS("function(settings, json) {", "$(this.api().table().header()).css({'background-color': '#4682B4',
                                                    'color': '#fff'});", "}"),
                                  
