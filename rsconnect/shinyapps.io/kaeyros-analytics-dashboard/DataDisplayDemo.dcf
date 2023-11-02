@@ -5,7 +5,7 @@ account: kaeyros-analytics-dashboard
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10373136
-bundleId: 7879162
+bundleId: 7881629
 url: https://kaeyros-analytics-dashboard.shinyapps.io/DataDisplayDemo/
 version: 1
 asMultiple: FALSE

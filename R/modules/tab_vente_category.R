@@ -57,7 +57,7 @@ tab_vente_category_ui <- function(id) {
                                             "Volume de vente par categorie"),
                           br(),
                           #plotly::plotlyOutput('plot3', height = "610px")
-                          shinycssloaders::withSpinner(plotly::plotlyOutput(ns('vente_category'), height = "500px")
+                          shinycssloaders::withSpinner(plotly::plotlyOutput(ns('vente_category'), height = "650px")
                                                        ,type = 8, color = 'grey')
                           
                       ), # end first box

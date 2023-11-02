@@ -74,7 +74,7 @@ top10_vente_category_server <- function(input, output, session) {
                                  searching = TRUE,
                                  # mark = list(accuracy = "exactly"),
                                  #deferRender = TRUE,
-                                 #scrollY = 300,
+                                 scrollY = 420,
                                  #scroller = TRUE, # remove the number of pages at the bottom with scroller = TRUE
                                  # search = list(regex = FALSE, caseInsensitive = TRUE, search=''),
                                  # #lengthMenu = list(c(5, 150, -1), c('5', '150', 'All')),
